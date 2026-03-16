@@ -10,31 +10,36 @@ body{
 background:#0a0a14;
 color:white;
 font-family:Arial, sans-serif;
-text-align:center;
 margin:0;
 }
+
+/* NAVBAR */
 
 .navbar{
 position:fixed;
 top:0;
 width:100%;
 background:#050510;
-padding:15px;
+padding:18px;
 z-index:10;
+text-align:center;
 }
 
 .navbar a{
-margin:0 20px;
+margin:0 25px;
 color:#8fb3ff;
 font-weight:bold;
 text-decoration:none;
 }
 
+/* HERO */
+
 .header{
-padding:160px 20px 120px 20px;
+padding:180px 20px 120px 20px;
 background-image:url("banner.png");
 background-size:cover;
 background-position:center;
+text-align:center;
 }
 
 .logo{
@@ -45,42 +50,51 @@ margin-bottom:20px;
 h1{
 font-size:48px;
 margin:10px 0;
-color:#000000;
+color:white;
 }
 
 .tagline{
 font-size:20px;
-color:#000000;
+color:#cfd8ff;
 }
 
-.enterrealm{
-margin-top:30px;
+.cta-buttons{
+margin-top:35px;
+}
+
+.cta{
 display:inline-block;
+margin:10px;
 padding:15px 30px;
-background:#1c2b6d;
+background:#2b3bbd;
 border-radius:10px;
 font-size:18px;
+color:white;
+text-decoration:none;
 }
+
+/* SECTIONS */
 
 .section{
-padding:60px 20px;
-max-width:900px;
+padding:80px 20px;
+max-width:1000px;
 margin:auto;
+text-align:center;
 }
 
-.assets{
-display:flex;
-justify-content:center;
-gap:40px;
-flex-wrap:wrap;
+.section h2{
+font-size:32px;
+margin-bottom:20px;
 }
 
-.card{
-background:#111122;
-padding:25px;
-border-radius:12px;
-width:240px;
-box-shadow:0 0 25px #00000066;
+/* VIDEO */
+
+.video-layout{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+margin-top:40px;
 }
 
 .video-container{
@@ -88,8 +102,6 @@ position:relative;
 padding-bottom:56.25%;
 height:0;
 overflow:hidden;
-max-width:900px;
-margin:auto;
 }
 
 .video-container iframe{
@@ -100,10 +112,60 @@ width:100%;
 height:100%;
 }
 
+/* FEATURES */
+
+.features{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+margin-top:40px;
+}
+
+.feature{
+background:#111122;
+padding:30px;
+border-radius:12px;
+}
+
+/* ASSETS */
+
+.assets{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.card{
+background:#111122;
+padding:25px;
+border-radius:12px;
+width:260px;
+box-shadow:0 0 25px #00000066;
+}
+
+/* FOOTER */
+
 .footer{
 padding:40px;
 font-size:14px;
 color:#aaa;
+text-align:center;
+background:#050510;
+margin-top:80px;
+}
+
+@media(max-width:900px){
+
+.video-layout{
+grid-template-columns:1fr;
+}
+
+.features{
+grid-template-columns:1fr;
+}
+
 }
 
 </style>
@@ -113,11 +175,14 @@ color:#aaa;
 
 <div class="navbar">
 <a href="#about">About</a>
+<a href="#features">Features</a>
 <a href="#assets">Assets</a>
 <a href="#tutorial">Tutorial</a>
 <a href="#contact">Contact</a>
 <a href="realm/realm.html">Enter Realm</a>
 </div>
+
+<!-- HERO -->
 
 <div class="header">
 
@@ -126,62 +191,51 @@ color:#aaa;
 <h1>SilverBloom Studios</h1>
 
 <p class="tagline">
-Crafting magical systems and tools for Unity developers
+Modular gameplay systems and magical tools for Unity developers
 </p>
 
-<a class="enterrealm" href="realm/realm.html">
-Enter the SilverBloom Realm
+<div class="cta-buttons">
+
+<a class="cta" href="#tutorial">
+Watch Demo
+</a>
+
+<a class="cta" href="realm/realm.html">
+Explore the Realm
 </a>
 
 </div>
 
+</div>
+
+<!-- ABOUT -->
+
 <div class="section" id="about">
 
-<h2>About</h2>
+<h2>About SilverBloom Studios</h2>
 
 <p>
 SilverBloom Studios creates modular gameplay systems, magic mechanics,
-visual effects, and developer tools for Unity. Our assets focus on RPG
-and fantasy experiences designed to help developers build immersive
-worlds faster and more efficiently.
+visual effects, and developer tools designed for Unity developers building
+RPG, adventure, and fantasy games.
+</p>
+
+<p>
+Our assets focus on fast integration, flexible customization, and systems
+that help developers prototype and build gameplay mechanics quickly.
 </p>
 
 </div>
 
-<div class="section" id="assets">
-
-<h2>Assets</h2>
-
-<div class="assets">
-
-<div class="card">
-<h3>Spell Systems</h3>
-<p>Modular magic and combat mechanics for RPG projects.</p>
-</div>
-
-<div class="card">
-<h3>Visual Effects</h3>
-<p>Magic circles, spells, and fantasy particle effects.</p>
-</div>
-
-<div class="card">
-<h3>Developer Tools</h3>
-<p>Flexible gameplay systems built for easy integration.</p>
-</div>
-
-</div>
-
-</div>
+<!-- VIDEO SECTION -->
 
 <div class="section" id="tutorial">
 
-<h2>Puzzle Terminal System Tutorial</h2>
+<h2>Puzzle Terminal System Demo</h2>
 
-<p>
-Watch demos showing how the Modular Puzzle Terminal & Door System works
-inside Unity. These videos demonstrate terminal interaction, puzzle UI
-behavior, drag-and-drop buttons, and unlocking doors after solving the puzzle.
-</p>
+<div class="video-layout">
+
+<div>
 
 <div class="video-container">
 <iframe
@@ -192,18 +246,100 @@ allowfullscreen>
 </iframe>
 </div>
 
-<br><br>
+</div>
 
-<div class="video-container">
-<iframe
-src="https://www.youtube.com/embed/EEkvmgGWlw8"
-title="Puzzle Terminal Door System Scene Demo"
-frameborder="0"
-allowfullscreen>
-</iframe>
+<div>
+
+<p>
+The Modular Puzzle Terminal System allows developers to quickly add
+interactive puzzle mechanics to their games.
+</p>
+
+<p>
+Players interact with a terminal to open a puzzle interface where
+buttons can be dragged into the correct order. Once solved, the puzzle
+triggers events such as unlocking doors.
+</p>
+
+<p>
+The system supports customizable UI layouts, button visuals, puzzle
+sizes, and interactive behaviors so it can fit a wide range of gameplay
+styles.
+</p>
+
 </div>
 
 </div>
+
+</div>
+
+<!-- FEATURES -->
+
+<div class="section" id="features">
+
+<h2>Key Features</h2>
+
+<div class="features">
+
+<div class="feature">
+<h3>Drag-and-Drop Puzzle System</h3>
+<p>
+Players can rearrange puzzle buttons to solve interactive challenges.
+</p>
+</div>
+
+<div class="feature">
+<h3>Modular Prefab Setup</h3>
+<p>
+Simply drag the Door, Terminal, and Puzzle UI prefabs into your scene.
+</p>
+</div>
+
+<div class="feature">
+<h3>Highly Customizable UI</h3>
+<p>
+Change button images, panel layouts, labels, and puzzle complexity.
+</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- ASSETS -->
+
+<div class="section" id="assets">
+
+<h2>Unity Assets</h2>
+
+<div class="assets">
+
+<div class="card">
+<h3>Puzzle Terminal System</h3>
+<p>
+Interactive puzzle UI system used to unlock doors and trigger gameplay events.
+</p>
+</div>
+
+<div class="card">
+<h3>Spell Systems</h3>
+<p>
+Modular magic and combat mechanics for RPG style games.
+</p>
+</div>
+
+<div class="card">
+<h3>Developer Tools</h3>
+<p>
+Flexible systems designed to speed up development workflows.
+</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- CONTACT -->
 
 <div class="section" id="contact">
 
