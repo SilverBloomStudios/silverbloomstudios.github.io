@@ -14,8 +14,24 @@ text-align:center;
 margin:0;
 }
 
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+background:#050510;
+padding:15px;
+z-index:10;
+}
+
+.navbar a{
+margin:0 20px;
+color:#8fb3ff;
+font-weight:bold;
+text-decoration:none;
+}
+
 .header{
-padding:120px 20px;
+padding:160px 20px 120px 20px;
 background-image:url("banner.png");
 background-size:cover;
 background-position:center;
@@ -35,6 +51,15 @@ color:#d0e4ff;
 .tagline{
 font-size:20px;
 color:#9fb8ff;
+}
+
+.enterrealm{
+margin-top:30px;
+display:inline-block;
+padding:15px 30px;
+background:#1c2b6d;
+border-radius:10px;
+font-size:18px;
 }
 
 .section{
@@ -64,15 +89,17 @@ font-size:14px;
 color:#aaa;
 }
 
-a{
-color:#8fb3ff;
-text-decoration:none;
-}
-
 </style>
 </head>
 
 <body>
+
+<div class="navbar">
+<a href="#about">About</a>
+<a href="#assets">Assets</a>
+<a href="#contact">Contact</a>
+<a href="realm/realm.html">Enter Realm</a>
+</div>
 
 <div class="header">
 
@@ -84,23 +111,26 @@ text-decoration:none;
 Crafting magical systems and tools for Unity developers
 </p>
 
+<a class="enterrealm" href="realm/realm.html">
+Enter the SilverBloom Realm
+</a>
+
 </div>
 
-<div class="section">
+<div class="section" id="about">
 
 <h2>About</h2>
 
 <p>
-SilverBloom Studios is an independent developer focused on creating high-quality tools, systems, and visual assets for Unity developers. Inspired by fantasy worlds and RPG gameplay, our assets are designed to help creators build immersive experiences more efficiently.
-
-We specialize in modular gameplay systems, spell and combat mechanics, visual effects, and developer-friendly frameworks that are easy to integrate and customize. Our goal is to provide practical solutions that save development time while remaining flexible enough for a wide range of projects.
-
-Whether you're building a small indie game or a large-scale RPG, SilverBloom Studios aims to support developers with reliable and well-documented assets.
+SilverBloom Studios creates modular gameplay systems, magic mechanics,
+visual effects, and developer tools for Unity. Our assets focus on RPG
+and fantasy experiences designed to help developers build immersive
+worlds faster and more efficiently.
 </p>
 
 </div>
 
-<div class="section">
+<div class="section" id="assets">
 
 <h2>Assets</h2>
 
@@ -125,7 +155,7 @@ Whether you're building a small indie game or a large-scale RPG, SilverBloom Stu
 
 </div>
 
-<div class="section">
+<div class="section" id="contact">
 
 <h2>Contact</h2>
 
