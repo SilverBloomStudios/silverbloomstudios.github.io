@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>SilverBloom Realm</title>
+
+<style>
+body{margin:0;overflow:hidden;background:black;}
+
+#ui{
+position:absolute;
+top:20px;
+left:50%;
+transform:translateX(-50%);
+color:white;
+font-family:Arial;
+background:rgba(0,0,0,0.5);
+padding:10px 20px;
+border-radius:10px;
+}
+
+.menu{
+position:absolute;
+top:80px;
+left:50%;
+transform:translateX(-50%);
+background:#111122;
+padding:20px;
+display:none;
+border-radius:10px;
+color:white;
+}
+
+button{
+margin-top:10px;
+padding:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="ui">
+WASD to move • Walk to objects to interact
+</div>
+
+<div id="menu" class="menu"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+
+<script src="realm.js"></script>
+
+</body>
+</html>
